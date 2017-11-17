@@ -14,7 +14,9 @@ public class MainApp extends Application {
 
     private Stage primaryStage;
     public BorderPane rootLayout;
-
+    
+	//public String user = "x";
+	
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -85,6 +87,89 @@ public class MainApp extends Application {
         }
     }
 
+    public void showNurse() {
+    	System.out.println("Called showNurse from MainApp");
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            //initialize the loader
+        	FXMLLoader loader = new FXMLLoader();
+        	loader.setLocation(MainApp.class.getResource("view/NurseView.fxml"));
+        	AnchorPane page = (AnchorPane) loader.load();
+            
+            //We'd like it to be centered
+            rootLayout.setCenter(page);
+            
+            // The controller needs access to the main app.
+            LoginScreenController controller = loader.getController();
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void showPharmacist() {
+    	System.out.println("Called showNurse from MainApp");
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            //initialize the loader
+        	FXMLLoader loader = new FXMLLoader();
+        	loader.setLocation(MainApp.class.getResource("view/PharmacistView.fxml"));
+        	AnchorPane page = (AnchorPane) loader.load();
+            
+            //We'd like it to be centered
+            rootLayout.setCenter(page);
+            
+            // The controller needs access to the main app.
+            LoginScreenController controller = loader.getController();
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void showAdmin() {
+    	System.out.println("Called showAdmin from MainApp");
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            //initialize the loader
+        	FXMLLoader loader = new FXMLLoader();
+        	loader.setLocation(MainApp.class.getResource("view/AdministratorView.fxml"));
+        	AnchorPane page = (AnchorPane) loader.load();
+            
+            //We'd like it to be centered
+            rootLayout.setCenter(page);
+            
+            // The controller needs access to the main app.
+            LoginScreenController controller = loader.getController();
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }    
+    public void showPatientSelection() {
+        try {
+            // Load the fxml file and create a new stage for the popup.
+            //initialize the loader
+        	FXMLLoader loader = new FXMLLoader();
+        	loader.setLocation(MainApp.class.getResource("view/PatientSelection.fxml"));
+        	AnchorPane page = (AnchorPane) loader.load();
+            
+            //We'd like it to be centered
+            rootLayout.setCenter(page);
+            
+            // The controller needs access to the main app.
+            LoginScreenController controller = loader.getController();
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
     /**
      * Returns the main stage.
      * @return
@@ -96,4 +181,7 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+
+    
 }

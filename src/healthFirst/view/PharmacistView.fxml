@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="healthFirst.view.LoginScreenController">
    <children>
-      <Text layoutX="129.0" layoutY="582.0" onDragDetected="#handleDoctor" strokeType="OUTSIDE" strokeWidth="0.0" text="You're an awesome Doctor" AnchorPane.bottomAnchor="14.98828125" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="128.53515625" AnchorPane.topAnchor="569.05078125" />
+      <Text layoutX="129.0" layoutY="582.0" onDragDetected="#handleDoctor" strokeType="OUTSIDE" strokeWidth="0.0" text="You're an awesome Pharmacist" AnchorPane.bottomAnchor="14.98828125" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="128.53515625" AnchorPane.topAnchor="569.05078125" />
       <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="156.0" prefHeight="340.0" prefWidth="223.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -93,12 +93,13 @@
             <Insets bottom="100.0" top="100.0" />
          </opaqueInsets>
       </GridPane>
-      <Button layoutX="242.0" layoutY="253.0" mnemonicParsing="false" text="Add a prescription" />
-      <Button layoutX="242.0" layoutY="393.0" mnemonicParsing="false" text="View Log History" />
+      <Button layoutX="254.0" layoutY="255.0" mnemonicParsing="false" text="Add a prescription" />
+      <Button layoutX="258.0" layoutY="386.0" mnemonicParsing="false" text="View Log History" />
       <Text layoutX="148.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HealthFirst Hospital" />
       <TextField layoutX="126.0" layoutY="113.0" promptText="patient ID" />
       <Circle fill="WHITE" layoutX="46.0" layoutY="45.0" onMouseClicked="#handlePatientSelect" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Text layoutX="34.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" />
       <Line endX="100.0" layoutX="199.0" layoutY="88.0" startX="-100.0" AnchorPane.leftAnchor="98.5" AnchorPane.rightAnchor="100.5" />
+      <Button layoutX="243.0" layoutY="314.0" mnemonicParsing="false" text="Prescribed Medication" />
    </children>
 </AnchorPane>
